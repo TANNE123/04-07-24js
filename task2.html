@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+
+        }
+        .user-btn{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+        }
+        .user{
+            font-size: 30px;
+        }
+        .password{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="user-btn">User Details</button>
+
+    <div class="user"></div>
+
+    <div class="password"></div>
+    
+    <script>
+        let btn=document.querySelector(".user-btn")
+        let user=document.querySelector(".user")
+        let password=document.querySelector(".password")
+        
+        btn.addEventListener("click",function(){
+            
+         let username=localStorage.getItem("na")
+         let pw=localStorage.getItem("pass")
+          user.append("Name:"+username)
+          password.append("Password:"+pw)
+        
+        })
+
+    </script>
+    
+</body>
+</html>

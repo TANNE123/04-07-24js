@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+    }
+
+    .btn_1{
+        width: 200px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .week_name{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <button class="btn_1">click me</button>
+    <div class="week_name"></div>
+    <script>
+        let btn=document.querySelector(".btn_1")
+        let week=document.querySelector('.week_name')
+
+        btn.addEventListener('click',function(){
+            let a=prompt("enter the week name :")
+            if(a=="sunday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="red"
+            }
+
+            else if(a=="monday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="green"
+            }
+
+            else if (a=="tuesday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="yellow"
+            }
+
+            else if(a=="wednesday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="blue"
+            }
+
+            else if(a=="thursday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="pink"
+            }
+
+            else if(a=="friday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="#3498DB"
+            }
+
+            else if(a=="saturday"){
+                week.innerHTML="week-name :"+a
+                week.style.color="#D35400"
+            }
+
+            else{
+                week.innerHTML="warning your week-name is not identified :"+a
+                week.style.color="black"
+            }
+        })
+    </script>
+</body>
+</html>
